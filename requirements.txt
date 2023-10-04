@@ -1,0 +1,12 @@
+pandas
+numpy
+flask
+seaborn 
+matplotlib
+scipy
+scikit-learn
+requests
+cufflinks
+ipykernel
+sweetviz
+-e .
