@@ -46,11 +46,4 @@ class DataIngestion:
         except Exception as e:
             logging.error('Exception Occured in Data Ingestion Stage(i.e DataIngestion)')
             raise CustomException(e,sys)
-if __name__ == "__main__":
-    logging.info("data ingestion has started")
-    obj = DataIngestion()
-    train_data, test_data = obj.initiate_data_ingestion()
-    obj = DataTransformation()
-    train_arr, test_arr, _ = obj.initiate_data_transformation(train_data, test_data)
-    obj1 =ModelTrainer()
-    obj1.initiate_model_trainng(train_arr,test_arr)
+ 

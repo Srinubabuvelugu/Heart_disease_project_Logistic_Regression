@@ -79,21 +79,20 @@ class DataTransformation:
             input_feature_test_df = test_df.drop(columns=drop_columns,axis=1)
             target_feature_test_df = test_df[target_column]
             logging.info('Applying prepeocessing object on training and testing datasets.')
-            ## Transforming using preprocessor object
-            input_train_feature_arr = preprocessing_obj.fit(input_feature_train_df)
-            
+            ## Transforming using prepeocessor object
+            input_feature_train_arr = preprocessing_obj.fit_transform(input_feature_train_df)
+            input_feature_test_arr = preprocessing_obj.transform(input_feature_test_df)
             ## creating numpy arrays to concatenate
-            train_arr = np.array(input_train_feature_arr)
-            #test_arr = np.c_[np.array(input_feature_test_df),np.array(target_feature_test_df)]
-            test_arr =np.array(input_feature_test_df)
+            train_arr = np.c_[input_feature_train_arr, np.array(target_feature_train_df)]
+            test_arr = np.c_[input_feature_test_arr, np.array(target_feature_test_df)]
 
-            ## calling the save_object file in utils folder ,to save as pickle file
-            save_object(
+            ## calling the save_object in utils folder
+            save_object(    
                 file_path = self.data_transformation_config.preprocessor_obj_file_path,
                 obj = preprocessing_obj
             )
-            logging.info('preprocessor Pickle file saving completed')
-
+            logging.info("preprocessor Pickel file saving completed.")
+            
             return (
                 train_arr,
                 test_arr,
