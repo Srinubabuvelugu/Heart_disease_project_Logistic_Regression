@@ -36,3 +36,10 @@ def evalute_model(X_train, y_train, X_test,y_test,models):
     except Exception as e:
         logging.error('Exception occured Model Training in Model_trainer/evaluate_model')
         raise CustomException(e,sys)
+def load_object(file_path):
+    try:
+        with open(file_path,'rb') as file_obj:
+            return pickle.load(file_obj)
+    except Exception as e:
+        logging.error('Error occured in load_objects function in utils')
+        raise CustomException(e,sys)
