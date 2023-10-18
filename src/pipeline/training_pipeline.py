@@ -10,11 +10,6 @@ from src.components.data_transformation import DataTransformation
 from src.components.model_trainear import ModelTrainer
 
 
-
-
-
-
-
 if __name__ == "__main__":
     logging.info("data ingestion has started")
     obj = DataIngestion()
