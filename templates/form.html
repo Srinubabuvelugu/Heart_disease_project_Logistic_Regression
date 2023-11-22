@@ -1,0 +1,56 @@
+<html>
+<body>
+<form action="{{url_for('predict_datapoint')}}" method="POST">
+    <div class="form-group">
+        <label for="male">male:</label>
+        <input type="text" id="male" name="male" placeholder="Enter male value (int)">
+    </div><br>
+     
+    <div class="form-group">
+        <label for="age">age:</label>
+        <input type="text" id="age" name="age" placeholder="Enter age value (int)">
+    </div><br>
+
+   
+
+    <div class="form-group">
+        <label for="prevalentHyp">prevalentHyp:</label>
+        <input type="text" id="prevalentHyp" name="prevalentHyp" placeholder="Enter prevalentHyp value (float)">
+    </div><br>
+    
+
+    <div class="form-group">
+        <label for="totChol">totChol:</label>
+        <input type="text" id="totChol" name="totChol" placeholder="Enter totChol value (float)">
+    </div>  <br>
+
+    <div class="form-group">
+        <label for="sysBP">sysBP:</label>
+        <input type="text" id="sysBP" name="sysBP" placeholder="Enter sysBP value (float)">
+    </div> <br> 
+
+    <div class="form-group">
+        <label for="diaBP">diaBP:</label>
+        <input type="text" id="diaBP" name="diaBP" placeholder="Enter diaBP value (float)">
+    </div>  <br>
+
+    <div class="form-group">
+        <label for="BMI">BMI:</label>
+        <input type="text" id="BMI" name="BMI" placeholder="Enter BMI value (float)">
+    </div>  <br>
+
+    <div class="form-group">
+        <label for="heartRate">heartRate:</label>
+        <input type="text" id="heartRate" name="heartRate" placeholder="Enter heartRate value (float)">
+    </div>  <br>
+
+    <div class="form-group">
+        <label for="glucose">glucose:</label>
+        <input type="text" id="glucose" name="glucose" placeholder="Enter glucose value (float)">
+    </div> <br> 
+
+<div style="clear:both;"></div>
+  <input type="submit" value="Submit">
+</form>
+</body>
+</html>

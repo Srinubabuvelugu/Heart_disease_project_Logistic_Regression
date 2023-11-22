@@ -1,7 +1,7 @@
 import os
 import sys
 import pandas as pd
-from sklearn.linear_model import LogisticRegression, Lasso, Ridge, ElasticNet
+from sklearn.linear_model import LogisticRegression 
 from dataclasses import dataclass
 from sklearn.metrics import accuracy_score
 from sklearn.tree import DecisionTreeClassifier
@@ -9,7 +9,7 @@ from sklearn.svm import SVC
 from sklearn.ensemble import RandomForestClassifier
 
 
-## logging and Exception handling
+## importing logging and Exception handling
 from src.logger import logging
 from src.exception import CustomException
 from src.utils import save_object,evalute_model
@@ -19,9 +19,6 @@ class ModelTrainerConfig:
     trained_model_file_path:str = os.path.join('artifacts','model.pkl')
 
 ## create class for model Trainer
-
-
-        
 
 class ModelTrainer:
     def __init__(self):

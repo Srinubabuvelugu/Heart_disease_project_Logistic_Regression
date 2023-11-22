@@ -27,31 +27,19 @@ class PredictPipeline:
             raise CustomException(e,sys)
 class CustomData:
     def __init__(self,
-                male,
-                age,
-                education,
-                currentSmoker,
-                cigsPerDay,
-                BPMeds ,
-                prevalentStroke,
-                prevalentHyp,
-                diabetes,
-                totChol,
-                sysBP,
-                diaBP,
-                BMI,
-                heartRate,
-                glucose
+                male:int,
+                age:int,
+                prevalentHyp:int,
+                totChol:float,
+                sysBP:float,
+                diaBP:float,
+                BMI:float,
+                heartRate:float,
+                glucose:float
             ):
         self.male = male
         self.age = age
-        self.education = education
-        self.currentSmoker = currentSmoker
-        self.cigsPerDay = cigsPerDay
-        self.BPMeds =BPMeds
-        self.prevalentStroke = prevalentStroke
         self.prevalentHyp = prevalentHyp
-        self.diabetes = diabetes
         self.totChol = totChol
         self.sysBP = sysBP
         self.diaBP = diaBP
@@ -63,14 +51,8 @@ class CustomData:
         try:
             custom_data_input_dict = {
                 'male':[self.male],
-                'age':[self.age],
-                'education':[self.education],
-                'currentSmoker':[self.currentSmoker],
-                'cigsPerDay':[self.cigsPerDay],
-                'BPMeds':[self.BPMeds],
-                'prevalentStroke':[self.prevalentStroke],
+                'age':[self.age],                
                 'prevalentHyp':[self.prevalentHyp],
-                'diabetes':[self.diabetes],
                 'totChol':[self.totChol],
                 'sysBP':[self.sysBP],
                 'diaBP':[self.diaBP],

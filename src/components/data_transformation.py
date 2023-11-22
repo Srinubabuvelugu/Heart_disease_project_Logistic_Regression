@@ -6,11 +6,12 @@ from dataclasses import dataclass
 import numpy as np
 import pandas as pd
 from sklearn.impute import SimpleImputer  ## Handling Missing Values
-from sklearn.preprocessing import StandardScaler, OrdinalEncoder ## Handling Feature Scalling and  Ordinal Encoder
+from sklearn.preprocessing import StandardScaler   ## Handling Feature Scalling 
 from sklearn.compose import ColumnTransformer
+
 ## pipe lines
 from sklearn.pipeline import Pipeline
-from sklearn.compose import ColumnTransformer
+
 ## logging and Exception handling
 from src.logger import logging
 from src.exception import CustomException
@@ -33,9 +34,9 @@ class DataTransformation:
 
         try:
             ## Numerical Columns
-            num_columns = ['male', 'age', 'education', 'currentSmoker', 'cigsPerDay',
-                'prevalentHyp', 'totChol', 'sysBP', 'diaBP', 'BMI', 'heartRate',
-                'glucose']
+            num_columns = ['male', 'age', 'prevalentHyp', 'totChol', 'sysBP', 'diaBP', 'BMI',
+                'heartRate', 'glucose']
+            
             ## Pipeline
             ## Numerical Pipe line
             logging.info('Numerical Pipeline started')
